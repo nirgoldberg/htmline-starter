@@ -11,7 +11,8 @@
 
 ## Description
 
-HTMLine Starter Theme used as a framework for building WordPress themes in a structured module based methodology
+HTMLine Starter Theme used as a framework for building WordPress themes in a structured module based methodology.
+
 
 ## Installation
 
@@ -25,8 +26,8 @@ HTMLine Starter Theme used as a framework for building WordPress themes in a str
 
 ## Copyright
 
-HTMLine Starter WordPress Theme, Copyright 2017 [HTMLine](http://www.htmline.com)
-HTMLine Starter Theme is distributed under the terms of the GNU GPL
+HTMLine Starter WordPress Theme, Copyright 2017 [HTMLine](http://www.htmline.com)  
+HTMLine Starter Theme is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -40,13 +41,14 @@ GNU General Public License for more details.
 
 HTMLine Starter Theme bundles the following third-party resources:
 
-Bootstrap, Copyright [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com)
-**License:** [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE).
+Bootstrap, Copyright [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com)  
+**License:** [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE)  
 Source: https://github.com/twbs/bootstrap
 
-jQuery UI, Copyright jQuery Foundation and other contributors
-**License**: MIT
+jQuery UI, Copyright jQuery Foundation and other contributors  
+**License**: MIT  
 Source: https://github.com/jquery/jquery-ui
+
 
 ## Changelog
 
