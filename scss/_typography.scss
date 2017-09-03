@@ -1,0 +1,110 @@
+@import "functions";
+
+/*************/
+/* headlines */
+/*************/
+
+h1, h2, h3, h4, h5, h6 {
+	@include font;
+}
+
+/*********/
+/* links */
+/*********/
+
+a {
+	color: $link-color;
+	text-decoration: underline;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+
+	&:focus {
+		color: $link-color;
+	}
+}
+
+/**************/
+/* paragraphs */
+/**************/
+
+p,
+pre {}
+
+/*********/
+/* lists */
+/*********/
+
+ul,
+ol {
+	list-style: circle;
+
+	li {}
+}
+
+/********/
+/* meta */
+/********/
+
+small {}
+
+/**********/
+/* images */
+/**********/
+
+img,
+.wp-caption {
+	&.alignleft {
+		float: left !important;
+		margin: 0 50px 20px 0;
+		max-width: 50%;
+	}
+
+	&.alignright {
+		float: right !important;
+		margin: 0 0 20px 50px;
+		max-width: 50%;
+	}
+
+	&.aligncenter {
+		margin: 0 auto 20px;
+		display: block;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.wp-caption {
+	margin-bottom: 20px;
+	padding: 6px;
+	max-width: 100%;
+	@include box-shadow(0, 0, rgba(153,153,153,0.2), 5px, 4px);
+
+	.wp-caption-text {
+		margin: 0;
+		font-size: 13px;
+		text-align: center;
+	}
+}
+
+/**************/
+/* blockquote */
+/**************/
+
+blockquote {}
+
+/************/
+/* svg-defs */
+/************/
+
+body > svg {
+	display: none;
+}
+
+.shape {
+	vertical-align: top;
+}

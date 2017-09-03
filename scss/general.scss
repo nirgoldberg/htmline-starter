@@ -1,0 +1,102 @@
+@import "functions";
+@import "typography";
+
+@charset "utf-8";
+
+/******************/
+/* general layout */
+/******************/
+
+* {
+	@include reset;
+}
+
+body {
+	@include font;
+	margin: 0 auto;
+	line-height: $line-height;
+	font-size: $font-size;
+	font-weight: $font-regular;
+	color: $font-color;
+
+	&:before {
+		content: "1200";
+		display: none;
+	}
+}
+
+.flex-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+
+	iframe,
+	object,
+	embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/****************/
+/* page content */
+/****************/
+
+.page-content {
+
+	/***********/
+	/* sidebar */
+	/***********/
+
+	.sidebar-wrapper {
+		.sidebar {
+			.sidebar-content {
+				.widget {
+					.widgettitle {}
+				}
+			}
+		}
+	}
+
+	/***********/
+	/* content */
+	/***********/
+
+	.content-wrapper {
+		.content {
+			.content-section {}
+		}
+	}
+	
+	/*************/
+	/* not found */
+	/*************/
+	
+	.not-found {
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/*******/
+/* 404 */
+/*******/
+
+.page-404 {}
+
+/**********/
+/* footer */
+/**********/
+
+footer {}
+
+/**************/
+/* responsive */
+/**************/
+
+@import "responsive";

@@ -1,0 +1,27 @@
+{
+  "name": "htmline-starter-theme",
+  "version": "1.0.0",
+  "description": "HTMLine Starter Theme",
+  "homepage": "https://github.com/nirgoldberg/htmline-starter-theme.git#readme",
+  "bugs": {
+    "url": "https://github.com/nirgoldberg/htmline-starter-theme/issues",
+    "email": "nir@htmline.com"
+  },
+  "license": "GPL-2.0",
+  "author": {
+    "name": "HTMLine",
+    "email": "nir@htmline.com"
+  },
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nirgoldberg/htmline-starter-theme.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-svgstore": "^1.0.0"
+  }
+}
