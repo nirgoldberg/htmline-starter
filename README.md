@@ -3,7 +3,7 @@
 **Contributors:** HTMLine  
 **Requires at least:** WordPress 4.7  
 **Tested up to:** WordPress 4.8.1  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, two-columns, left-sidebar, editor-style, featured-images, rtl-language-support, translation-ready
@@ -17,11 +17,12 @@ HTMLine Starter Theme used as a framework for building WordPress themes in a str
 ## Installation
 
 1. Download HTMLine Starter Theme to your local WordPress installation.
-2. Install npm.
-3. Install grunt.
-4. Run grunt command for building theme assets (CSS, JS, SVGs).
-5. In your admin panel, go to Appearance -> Themes.
-6. Click on the 'Activate' button to use your new theme right away.
+2. Open theme directory in terminal and run `npm install` to pull in all Grunt dependencies.
+3. Run `grunt` to execute tasks.
+4. In your admin panel, go to Appearance -> Themes.
+5. Click on the 'Activate' button to use your new theme right away.
+
+You may install and modify this theme directly, but it's better to use a child theme.
 
 
 ## Copyright
@@ -51,6 +52,11 @@ Source: https://github.com/jquery/jquery-ui
 
 
 ## Changelog
+
+### 1.0.1
+* Released: September 8, 2017
+
+Child theme support
 
 ### 1.0.0
 * Released: September 3, 2017
