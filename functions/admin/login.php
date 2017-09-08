@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/functions/admin
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -37,8 +37,13 @@ add_action( 'login_head', 'htmline_login_screen' );
  */
 function htmline_login_logo_url() {
 
+	/**
+	 * Variables
+	 */
+	$output = HOME;
+
 	// return
-	return HOME;
+	return apply_filters( 'htmline_login_logo_url', $output );
 
 }
 add_filter( 'login_headerurl', 'htmline_login_logo_url' );
@@ -54,8 +59,13 @@ add_filter( 'login_headerurl', 'htmline_login_logo_url' );
  */
 function htmline_login_logo_url_title() {
 
+	/**
+	 * Variables
+	 */
+	$output = get_bloginfo( 'name' );
+
 	// return
-	return get_bloginfo( 'name' );
+	return apply_filters( 'htmline_login_logo_url_title', $output );
 
 }
 add_filter( 'login_headertitle', 'htmline_login_logo_url_title' );

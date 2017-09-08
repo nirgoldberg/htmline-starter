@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/functions
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -65,6 +65,27 @@ function htmline_wp_scripts_n_styles() {
 	wp_register_script( 'jquery-ui',	JS_DIR . '/libs/jquery-ui.min.js',		array('bootstrap'),		VERSION,	true );
 	wp_register_script( 'general',		JS_DIR . '/min/general.min.js',			array('bootstrap'),		VERSION,	true );
 
+	/**
+	 * Child theme
+	 */
+	if ( is_child_theme() ) {
+
+		/**
+		 * Child theme styles
+		 */
+		if ( file_exists( THEME_ROOT . '/css/general.css' ) ) {
+			wp_enqueue_style ( 'child-general',		CHILD_CSS_DIR . '/general.css',		array('general'),		VERSION );
+		}
+
+		/**
+		 * Child theme scripts
+		 */
+		if ( file_exists( THEME_ROOT . '/js/general.js' ) ) {
+			wp_register_script( 'child-general',	CHILD_JS_DIR . '/general.js',		array('general'),		VERSION,	true );
+		}
+
+	}
+
 }
 
 /**
@@ -81,10 +102,10 @@ function htmline_editor_style( $styles ) {
 	$styles .= ', ' . CSS_DIR . '/admin/' . 'editor.css';
 
 	// Google Fonts
-	global $google_fonts;
+	global $globals;
 
-	if ( $google_fonts ) {
-		foreach ( $google_fonts as $key => $val ) {
+	if ( $globals[ 'google_fonts' ] ) {
+		foreach ( $globals[ 'google_fonts' ] as $key => $val ) {
 			$font = str_replace( ',', '&#44', $val );
 			$styles .= ', ' . $font;
 		}

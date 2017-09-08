@@ -3,9 +3,9 @@
  * Shape - logo
  *
  * @author		HTMLine
- * @package		vision/views/svgs
+ * @package		htmline-starter/views/svgs
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

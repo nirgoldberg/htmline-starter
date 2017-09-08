@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/views/header
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -24,10 +24,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	<!-- Google Fonts -->
 	<?php
 
-		global $google_fonts;
+		global $globals;
 
-		if ( $google_fonts ) {
-			foreach ( $google_fonts as $key => $val ) {
+		if ( $globals[ 'google_fonts' ] ) {
+			foreach ( $globals[ 'google_fonts' ] as $key => $val ) {
 				printf ( "<link href='%s' rel='stylesheet'>", $val );
 			}
 		}

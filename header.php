@@ -7,7 +7,7 @@
  * @author		HTMLine
  * @package		htmline-starter
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -53,11 +53,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php
 	/**
-	 * get_sidebar
+	 * htmline_sidebar
 	 *
-	 * Display the sidebar
+	 * @hooked	htmline_get_sidebar - 10 (outputs sidebar)
 	 */
-	get_sidebar();
+	do_action( 'htmline_sidebar' );
 ?>
 
 <?php

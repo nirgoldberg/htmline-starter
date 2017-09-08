@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/functions
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -34,16 +34,37 @@ define( 'VERSION', $theme_version );
 $stylesheet = get_stylesheet();
 $theme_root = get_theme_root( $stylesheet );
 
-define( 'TEMPLATE',		get_bloginfo( 'template_directory' ) );
-define( 'HOME',			home_url( '/' ) );
-define( 'THEME_ROOT',	"$theme_root/$stylesheet" );
-define( 'CSS_DIR',		TEMPLATE . '/css' );
-define( 'JS_DIR',		TEMPLATE . '/js' );
-define( 'WIDGETS_PATH',	THEME_ROOT . '/widgets' );
+define( 'TEMPLATE',			get_bloginfo( 'template_directory' ) );
+define( 'STYLESHEET',		get_bloginfo( 'stylesheet_directory' ) );
+define( 'THEME_ROOT',		"$theme_root/$stylesheet" );
+define( 'HOME',				home_url( '/' ) );
+define( 'CSS_DIR',			TEMPLATE . '/css' );
+define( 'JS_DIR',			TEMPLATE . '/js' );
+define( 'CHILD_CSS_DIR',	STYLESHEET . '/css' );
+define( 'CHILD_JS_DIR',		STYLESHEET . '/js' );
+define( 'WIDGETS_PATH',		THEME_ROOT . '/widgets' );
 
 /**
- * Google Fonts
+ * htmline_google_fonts
+ *
+ * This function declares Google Fonts to be registered later
+ *
+ * @since		1.0.1
+ * @param		N/A
+ * @return		N/A
  */
-$google_fonts = array (
-	'Alef'	=> 'https://fonts.googleapis.com/css?family=Alef:400,700&amp;subset=hebrew'
-);
+function htmline_google_fonts() {
+
+	/**
+	 * Variables
+	 */
+	global $globals;
+
+	$fonts = array(
+		'Alef'	=> 'https://fonts.googleapis.com/css?family=Alef:400,700&amp;subset=hebrew'
+	);
+
+	$globals[ 'google_fonts' ] = apply_filters( 'htmline_google_fonts', $fonts );
+
+}
+add_action( 'init', 'htmline_google_fonts' );

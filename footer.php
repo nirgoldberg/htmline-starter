@@ -7,7 +7,7 @@
  * @author		HTMLine
  * @package		htmline-starter
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -41,7 +41,7 @@ global $globals;
 
 	var js_globals = {};
 	js_globals.template_url		= "<?php echo TEMPLATE; ?>";
-	js_globals.page_template	= "<?php echo $globals['page_template']; ?>";
+	js_globals.page_template	= "<?php echo $globals[ 'page_template' ]; ?>";
 
 </script>
 
@@ -58,6 +58,13 @@ global $globals;
 	wp_enqueue_script( 'bootstrap' );
 	wp_enqueue_script( 'jquery-ui' );
 	wp_enqueue_script( 'general' );
+
+	/**
+	 * Child theme scripts
+	 */
+	if ( is_child_theme() && wp_script_is( 'child-general', 'registered' ) ) {
+		wp_enqueue_script( 'child-general' );
+	}
 
 ?>
 

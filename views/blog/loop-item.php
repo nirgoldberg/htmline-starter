@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/views/blog
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 			/**
 			 * Display the post title
 			 */
-			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			echo apply_filters( 'htmline_loop_post_title', the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>', false ), $post );
 		?>
 
 	</div><!-- .post-header -->

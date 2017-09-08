@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/functions
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -17,6 +17,7 @@ add_action( 'htmline_before_page_content',	'htmline_theme_wrapper_start',			10 )
 add_action( 'htmline_after_page_content',	'htmline_theme_wrapper_end',			10 );
 
 add_action( 'htmline_before_sidebar',		'htmline_theme_sidebar_wrapper_start',	10 );
+add_action( 'htmline_sidebar',				'htmline_get_sidebar',					10 );
 add_action( 'htmline_after_sidebar',		'htmline_theme_sidebar_wrapper_end',	10 );
 
 add_action( 'htmline_before_main_content',	'htmline_theme_content_wrapper_start',	10 );
@@ -33,7 +34,12 @@ add_action( 'htmline_after_main_content',	'htmline_theme_content_wrapper_end',	1
  */
 function htmline_theme_wrapper_start() {
 
-	echo '<section class="page-content"><div class="container"><div class="row">';
+	/**
+	 * Variables
+	 */
+	$output = '<section class="page-content"><div class="container"><div class="row">';
+
+	echo apply_filters( 'htmline_theme_wrapper_start', $output );
 
 }
 
@@ -48,7 +54,12 @@ function htmline_theme_wrapper_start() {
  */
 function htmline_theme_wrapper_end() {
 
-	echo '</div></div><!-- .container --></section><!-- .page-content -->';
+	/**
+	 * Variables
+	 */
+	$output = '</div></div><!-- .container --></section><!-- .page-content -->';
+
+	echo apply_filters( 'htmline_theme_wrapper_end', $output );
 
 }
 
@@ -63,7 +74,32 @@ function htmline_theme_wrapper_end() {
  */
 function htmline_theme_sidebar_wrapper_start() {
 
-	echo '<div class="sidebar-wrapper col-sm-3"><section class="sidebar">';
+	/**
+	 * Variables
+	 */
+	$output = '<div class="sidebar-wrapper col-sm-3"><section class="sidebar">';
+
+	echo apply_filters( 'htmline_theme_sidebar_wrapper_start', $output );
+
+}
+
+/**
+ * htmline_get_sidebar
+ *
+ * This function display the sidebar
+ *
+ * @since		1.0.1
+ * @param		N/A
+ * @return		N/A
+ */
+function htmline_get_sidebar() {
+
+	/**
+	 * get_sidebar
+	 *
+	 * Display the sidebar
+	 */
+	get_sidebar();
 
 }
 
@@ -78,7 +114,12 @@ function htmline_theme_sidebar_wrapper_start() {
  */
 function htmline_theme_sidebar_wrapper_end() {
 
-	echo '</section><!-- .sidebar --></div><!-- .sidebar-wrapper -->';
+	/**
+	 * Variables
+	 */
+	$output = '</section><!-- .sidebar --></div><!-- .sidebar-wrapper -->';
+
+	echo apply_filters( 'htmline_theme_sidebar_wrapper_end', $output );
 
 }
 
@@ -93,7 +134,12 @@ function htmline_theme_sidebar_wrapper_end() {
  */
 function htmline_theme_content_wrapper_start() {
 
-	echo '<div class="content-wrapper col-sm-9"><section class="content">';
+	/**
+	 * Variables
+	 */
+	$output = '<div class="content-wrapper col-sm-9"><section class="content">';
+
+	echo apply_filters( 'htmline_theme_content_wrapper_start', $output );
 
 }
 
@@ -108,7 +154,12 @@ function htmline_theme_content_wrapper_start() {
  */
 function htmline_theme_content_wrapper_end() {
 
-	echo '</section><!-- .content --></div><!-- .content-wrapper -->';
+	/**
+	 * Variables
+	 */
+	$output = '</section><!-- .content --></div><!-- .content-wrapper -->';
+
+	echo apply_filters( 'htmline_theme_content_wrapper_end', $output );
 
 }
 
@@ -118,7 +169,9 @@ function htmline_theme_content_wrapper_end() {
 global $globals;
 $globals = array(
 
-	'page_template'	=> ''
+	'google_fonts'	=> '',
+	'page_template'	=> '',
+	'theme_menus'	=> ''
 
 );
 

@@ -5,7 +5,7 @@
  * @author		HTMLine
  * @package		htmline-starter/functions/admin
  * @since		1.0.0
- * @version		1.0.0
+ * @version		1.0.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -21,8 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 function htmline_footer_text() {
 
+	/**
+	 * Variables
+	 */
+	$output = "<span id=\"footer-thankyou\">By <a href=\"http://www.htmline.com/\">HTMLine</a>.</span>";
+
 	// return
-	return "<span id=\"footer-thankyou\">By <a href=\"http://www.htmline.com/\">HTMLine</a>.</span>";
+	return apply_filters( 'htmline_footer_text', $output );
 
 }
 add_action( 'admin_footer_text', 'htmline_footer_text' );
