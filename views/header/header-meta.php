@@ -36,4 +36,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 	<?php wp_head(); ?>
 
+	<?php
+		/**
+		 * htmline_before_closing_head hook
+		 */
+		do_action( 'htmline_before_closing_head' );
+	?>
+
 </head>

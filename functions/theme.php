@@ -86,7 +86,7 @@ function htmline_theme_sidebar_wrapper_start() {
 /**
  * htmline_get_sidebar
  *
- * This function display the sidebar
+ * This function displays the sidebar
  *
  * @since		1.0.1
  * @param		N/A

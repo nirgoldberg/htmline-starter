@@ -46,12 +46,13 @@ global $globals;
 </script>
 
 <?php
-
 	/**
 	 * Display footer
 	 */
 	get_template_part( 'views/footer/footer' );
+?>
 
+<?php
 	/**
 	 * Footer scripts
 	 */
@@ -65,10 +66,16 @@ global $globals;
 	if ( is_child_theme() && wp_script_is( 'child-general', 'registered' ) ) {
 		wp_enqueue_script( 'child-general' );
 	}
-
 ?>
 
 </div><!-- #page -->
+
+<?php
+	/**
+	 * htmline_before_closing_body hook
+	 */
+	do_action( 'htmline_before_closing_body' );
+?>
 
 <?php wp_footer(); ?>
 

@@ -26,6 +26,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php
 	/**
+	 * htmline_after_opening_body hook
+	 */
+	do_action( 'htmline_after_opening_body' );
+?>
+
+<?php
+	/**
 	 * Display SVG sprite
 	 */
 	get_template_part( 'views/header/header', 'svg' );

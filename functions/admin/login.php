@@ -51,7 +51,7 @@ add_filter( 'login_headerurl', 'htmline_login_logo_url' );
 /**
  * htmline_login_logo_url_title
  *
- * This function Sets login logo title
+ * This function sets login logo title
  *
  * @since		1.0.0
  * @param		N/A
