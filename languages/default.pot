@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: HTMLine Starter Theme 1.0.0\n"
-"POT-Creation-Date: 2017-09-03 13:49+0200\n"
-"PO-Revision-Date: 2017-09-03 13:50+0200\n"
+"POT-Creation-Date: 2017-09-09 23:58+0200\n"
+"PO-Revision-Date: 2017-09-10 00:00+0200\n"
 "Last-Translator: Nir Goldberg <nir@htmline.com>\n"
 "Language-Team: HTMLine <nir@htmline.com>\n"
 "Language: he_IL\n"
@@ -25,6 +25,14 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
+#: views/page/404.php:17
+msgid "404"
+msgstr ""
+
+#: views/page/404.php:18
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
 #: views/components/searchform.php:16
 msgid "Search..."
 msgstr ""
@@ -45,6 +53,6 @@ msgstr ""
 msgid "homepage"
 msgstr ""
 
-#: functions/menus.php:19
+#: functions/menus.php:30
 msgid "Main Menu"
 msgstr ""

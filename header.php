@@ -26,9 +26,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php
 	/**
-	 * svg-defs.svg
+	 * Display SVG sprite
 	 */
-	include_once( 'images/general/svg-defs.svg' );
+	get_template_part( 'views/header/header', 'svg' );
 ?>
 
 <div id="page" class="site">
