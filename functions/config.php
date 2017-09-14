@@ -45,6 +45,22 @@ define( 'CHILD_JS_DIR',		STYLESHEET . '/js' );
 define( 'WIDGETS_PATH',		THEME_ROOT . '/widgets' );
 
 /**
+ * htmline_load_theme_textdomain
+ *
+ * This function load theme text domain
+ *
+ * @since		1.0.1
+ * @param		N/A
+ * @return		N/A
+ */
+function htmline_load_theme_textdomain() {
+
+	load_theme_textdomain( 'htmline', get_template_directory() . '/languages' );
+
+}
+add_action( 'after_setup_theme', 'htmline_load_theme_textdomain' );
+
+/**
  * htmline_google_fonts
  *
  * This function declares Google Fonts to be registered later
