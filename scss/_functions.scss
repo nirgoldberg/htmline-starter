@@ -133,7 +133,7 @@
 }
 
 @mixin vertical-align {
-	position: absolute;
+	position: relative;
 	top: 50%;
 	-webkit-transform:	translateY(-50%);
 	-ms-transform:		translateY(-50%);
@@ -187,6 +187,18 @@
 }
 
 @mixin flex-align-items($align: center) {
+	-webkit-box-align: $align;
+	-ms-flex-align:    $align;
+	align-items:       $align;
+}
+
+@mixin flex-center {
+	display:           -webkit-box;		/* OLD - iOS 6-, Safari 3.1-6 */
+	display:           -moz-box;		/* OLD - Firefox 19- (buggy but mostly works) */
+	display:           -ms-flexbox;		/* TWEENER - IE 10 */
+	display:           -webkit-flex;	/* NEW - Chrome */
+	display:           flex;			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	justify-content:   center;
 	-webkit-box-align: $align;
 	-ms-flex-align:    $align;
 	align-items:       $align;
